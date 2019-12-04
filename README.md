@@ -18,6 +18,7 @@ The following methods are implemented for naming conventions:
 We define resource types as per: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging 
 
 Current prototype supports:
+
 | Resource type                       | Resource name prefix |
 | ----------------------------------- | -------------------- |
 | Resource group                      | rg-                  |
