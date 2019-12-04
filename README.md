@@ -5,6 +5,7 @@ This module implements a set of methodologies for naming convention implementati
 ## Methods for naming convention
 
 The following methods are implemented for naming conventions:
+
 | method name | description of the naming convention used |
 | -- | -- |
 | cafclassic | follows Cloud Adoption Framework for Azure recommendations as per https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging |
@@ -13,6 +14,7 @@ The following methods are implemented for naming conventions:
 | passthrough | naming convention is implemented manually, fields given as input will be same as the output (but lengths and forbidden chars will be filtered out) |
 
 ## Resource types
+
 We define resource types as per: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging 
 
 Current prototype supports:
