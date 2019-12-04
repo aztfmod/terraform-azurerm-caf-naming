@@ -78,16 +78,16 @@ This output will be consumed directly by a module to name the component before c
 
 Example:
 ```hcl
-module "caf_name_sa" {
+module "caf_name_st" {
   source = "../terraform-azurerm-caf-naming/"
   
   name    = var.name
-  type    = "sa"
+  type    = "st"
   convention  = var.convention
 }
 
 resource "azurerm_storage_account" "log" {
-  name                      = module.caf_name_sa.sa
+  name                      = module.caf_name_sa.st
   resource_group_name       = var.resource_group_name
   location                  = var.location
   account_kind              = "StorageV2"
