@@ -87,7 +87,7 @@ module "caf_name_st" {
 }
 
 resource "azurerm_storage_account" "log" {
-  name                      = module.caf_name_sa.st
+  name                      = module.caf_name_st.st
   resource_group_name       = var.resource_group_name
   location                  = var.location
   account_kind              = "StorageV2"
