@@ -19,7 +19,7 @@ variable "azlimits" {
   description = "limit for resources"
   default = {
     "rg"            = 90
-    "keyvault"      = 24
+    "kv"            = 24 
     "st"            = 24
     "vnet"          = 64
     "nsg"           = 80
@@ -38,7 +38,7 @@ variable "azlimits" {
 variable "caf_prefix" {
   description = "caf recommended prefix"
   default = {
-    "keyvault"      = "kv-"
+    "kv"            = "kv-"
     "rg"            = "rg-"
     "st"            = "st"
     "evh"            = "evh-"
