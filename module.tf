@@ -6,13 +6,26 @@ resource "random_string" "fullrandom" {
   upper   = false
 }
 
-# resource "random_string" "char1" {
-#   count = (var.convention == "random" || var.convention == "cafrandom" )  == true ? 1 : 0
-#   length  = 1
-#   special = false
-#   number = false
-#   upper = false
-# }
+resource "random_string" "singlechar" {
+  length  = 1
+  special = false
+  number = false
+  upper = false
+}
+
+resource "random_string" "singlealphanum" {
+  length  = 1
+  special = false
+  number = true
+  upper = false
+}
+
+# random
+locals {
+  random                = random_string.fullrandom[0].result
+  singlerandom_letter   = random_string.singlechar.result
+  singlerandom_alphanum = random_string.singlealphanum.result
+} 
 
 # regexes and charset filters
 locals {
@@ -21,6 +34,7 @@ locals {
   filter_alphanumu   = "/[^0-9A-Za-z,_]/"
   filter_alphanumhu  = "/[^0-9A-Za-z,_,-]/"
   filter_alphanumhup = "/[^0-9A-Za-z,_,.,-]/"
+  filter_startletter = "/\\A[^a-z]/"
 }
 
 # determine max capacity
@@ -35,7 +49,7 @@ locals {
     alphanum    = replace(var.name, local.filter_alphanum, "")
     alphanumhup = replace(var.name, local.filter_alphanumhup, "")
     alphanumhu  = replace(var.name, local.filter_alphanumhu, "")
-    alphanumh   =   replace(var.name, local.filter_alphanumh, "")
+    alphanumh   = replace(var.name, local.filter_alphanumh, "")
   }
   filteredpostfix = {
     alphanum    = replace(var.postfix, local.filter_alphanum, "")
@@ -45,7 +59,14 @@ locals {
   }
 }
 
+locals {
+  filtered_extend = {
+    alphanumh_startletter = replace(local.filtered.alphanumh, local.filter_startletter, local.singlerandom_letter)
+  }
+}
+
 #generic outputs
 locals {
-  fullyrandom = (var.convention == "random" || var.convention == "cafrandom")  == true ? substr(random_string.fullrandom[0].result, 0, local.max) : null
+  fullyrandom             = (var.convention == "random" || var.convention == "cafrandom")  == true ? substr(local.random, 0, local.max) : null
+  fullyrandom_startletter = (var.convention == "random" || var.convention == "cafrandom")  == true ? substr("${local.singlerandom_letter}${local.random}", 0, local.max) : null
 }
