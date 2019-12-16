@@ -32,6 +32,7 @@ variable "azlimits" {
     "lbrule"        = 80
     "evh"           = 50
     "la"            = 63
+    "gen"           = 24
   }
 }
 
@@ -50,6 +51,7 @@ variable "caf_prefix" {
     "windowsvm"     = "vm-"
     "lb"            = "lb"
     "la"            = "la"
+    "gen"           = "gen"
 }
 }
 

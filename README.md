@@ -25,6 +25,8 @@ Current prototype supports:
 | Azure Storage Account               | st                 |
 | Azure Event Hubs                    | evh-                 |
 | Azure Monitor Log Analytics         | la-               |
+| Azure Key Vault                     | kv-               |
+| generic                             | gen               |
 
 ## Parameters
 
