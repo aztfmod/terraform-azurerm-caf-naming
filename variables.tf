@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Input name"
+  description = "input name"
 }
 
 variable "type" {
