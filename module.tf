@@ -1,5 +1,5 @@
 resource "random_string" "fullrandom" {
-  count = (var.convention == "random" || var.convention == "cafrandom" )  == true ? 1 : 0
+  # count = (var.convention == "random" || var.convention == "cafrandom" )  == true ? 1 : 0
   length  = local.max
   special = false
   lower   = true
@@ -22,7 +22,7 @@ resource "random_string" "singlealphanum" {
 
 # random
 locals {
-  random                = random_string.fullrandom[0].result
+  random                = random_string.fullrandom.result
   singlerandom_letter   = random_string.singlechar.result
   singlerandom_alphanum = random_string.singlealphanum.result
 } 
