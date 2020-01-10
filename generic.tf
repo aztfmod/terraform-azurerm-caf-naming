@@ -1,6 +1,6 @@
-## storageaccount
+# generic output
 locals {
-  #lowercase alphanum 3-24
+
     gen = {
       passthrough = (var.type == "gen" && var.convention == "passthrough") ? substr(local.filtered.alphanum, 0, local.max) : null
       cafclassic  = (var.type == "gen" && var.convention == "cafclassic") ? substr("${lookup(var.caf_prefix, var.type)}${local.filtered.alphanum}${local.filteredpostfix.alphanum}", 0, local.max) : null

@@ -75,7 +75,7 @@ Feel free to submit your PR to add capabilities
 ## Outputs
 
 This module outputs one name, the result of the naming convention query, you must specify the type of output required, example for a storage account, you will get
-<module>.sa which returns the name based on the convention input.
+<module>.st which returns the name based on the convention input.
 This output will be consumed directly by a module to name the component before calling the azurerm resource provider.
 
 Example:
