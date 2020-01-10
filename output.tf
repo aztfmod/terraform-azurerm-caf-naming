@@ -1,0 +1,1 @@
+#output are specified directly in each resource type files.
