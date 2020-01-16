@@ -7,7 +7,7 @@ variable "type" {
 }
 
 variable "convention" {
-  description = "(Requires )naming convention methode to be used"
+  description = "(Requires) naming convention methode to be used"
 }
 
 variable "postfix" {
@@ -18,20 +18,25 @@ variable "postfix" {
 variable "azlimits" {
   description = "limit for resources"
   default = {
+    "asr"           = 50
+    "aaa"           = 50
+    "acr"           = 49
+    "afw"           = 80
     "rg"            = 90
     "kv"            = 24 
     "st"            = 24
     "vnet"          = 64
     "nsg"           = 80
-    "vsubnet"       = 80
+    "snet"          = 80
     "nic"           = 80
-    "linuxvm"       = 64 
-    "windowsvm"     = 15
+    "vml"           = 64 
+    "vmw"           = 15
     "functionapp"   = 60
     "lb"            = 80
     "lbrule"        = 80
     "evh"           = 50
     "la"            = 63
+    "pip"           = 80
     "gen"           = 24
   }
 }
@@ -39,18 +44,23 @@ variable "azlimits" {
 variable "caf_prefix" {
   description = "caf recommended prefix"
   default = {
+    "asr"           = "asr-"
+    "aaa"           = "aaa-"
+    "afw"           = "afw-"
+    "acr"           = "acr"
     "kv"            = "kv-"
     "rg"            = "rg-"
     "st"            = "st"
-    "evh"            = "evh-"
+    "evh"           = "evh-"
     "vnet"          = "vnet-"
-    "vsubnet"       = "snet-"
+    "snet"          = "snet-"
     "nsg"           = "nsg-"
     "vm"            = "vm-"
-    "linuxvm"       = "vm-"
-    "windowsvm"     = "vm-"
+    "vml"           = "vm-"
+    "vmw"           = "vm-"
     "lb"            = "lb"
     "la"            = "la"
+    "pip"           = "pip-"
     "gen"           = "gen"
 }
 }
