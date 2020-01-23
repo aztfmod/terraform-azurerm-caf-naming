@@ -19,5 +19,5 @@ terraform destroy
 ## Outputs
 | Name | Description |
 | --   | -- |
-| storage_name | Returns the name of the created storage account | 
+| vm_name | Returns the name of the created vm | 
 | caf_name | Returns the name as given by the CAF module, before being sent to storage account creation |
