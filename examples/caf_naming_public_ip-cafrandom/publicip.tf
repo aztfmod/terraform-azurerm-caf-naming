@@ -20,5 +20,5 @@ resource "azurerm_public_ip" "testip" {
   location            = local.location
   resource_group_name = module.rg_test.names.test
   allocation_method   = "Static"
-  tags                = local.tags t
+  tags                = local.tags
 }
