@@ -61,7 +61,9 @@ locals {
 
 locals {
   filtered_extend = {
+    alphanum_startletter = replace(local.filtered.alphanum, local.filter_startletter, local.singlerandom_letter)
     alphanumh_startletter = replace(local.filtered.alphanumh, local.filter_startletter, local.singlerandom_letter)
+    alphanumhup_startletter = replace(local.filtered.alphanumhup, local.filter_startletter, local.singlerandom_letter)
   }
 }
 

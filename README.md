@@ -19,14 +19,24 @@ We define resource types as per: https://docs.microsoft.com/en-us/azure/cloud-ad
 
 Current prototype supports:
 
-| Resource type                       | Resource name prefix |
-| ----------------------------------- | -------------------- |
-| Resource group                      | rg-                  |
-| Azure Storage Account               | st                 |
-| Azure Event Hubs                    | evh-                 |
-| Azure Monitor Log Analytics         | la-               |
-| Azure Key Vault                     | kv-               |
-| generic                             | gen               |
+| Resource type                       | Resource type code  |
+| ----------------------------------- | --------------------|
+| Resource group                      | rg                  |
+| Azure Storage Account               | st                  |
+| Azure Event Hubs                    | evh                 |
+| Azure Monitor Log Analytics         | la                  |
+| Azure Key Vault                     | kv                  |
+| Windows Virtual Machine             | vmw                 |
+| Linux Virtual Machine               | vml                 |
+| Public IP                           | pip                 |
+| Network Security Group              | nsg                 |
+| Virtual Network Interface Card      | nic                 |
+| Virtual Network                     | vnet                |
+| Azure Firewall                      | afw                |
+| Azure Container Registry            | acr                |
+| Azure Site Recovery                 | asr                |
+| Azure Automation                    | aaa                |
+| generic                             | gen                 |
 
 ## Parameters
 
