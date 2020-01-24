@@ -1,4 +1,4 @@
-## 0.1.1 (January 14, 2020)
+## 0.1.2 (January 14, 2020)
 
 FEATURES:
 * **New Resource type:** Windows VM ([#4](https://github.com/aztfmod/terraform-azurerm-caf-naming/issues/4))
