@@ -21,7 +21,8 @@ variable "azlimits" {
     "asr"           = 50
     "aaa"           = 50
     "acr"           = 49
-    "afw"           = 80
+    "afw"           = 50
+    #afw limit is 80 - not working need to investigate - safeguarding it at 50 during investigation
     "rg"            = 90
     "kv"            = 24 
     "st"            = 24
