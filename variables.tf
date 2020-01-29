@@ -47,23 +47,24 @@ variable "caf_prefix" {
   default = {
     "asr"           = "asr-"
     "aaa"           = "aaa-"
-    "afw"           = "afw-"
     "acr"           = "acr"
-    "kv"            = "kv-"
+    "afw"           = "afw-"
     "rg"            = "rg-"
+    "kv"            = "kv-"
     "st"            = "st"
-    "evh"           = "evh-"
     "vnet"          = "vnet-"
-    "snet"          = "snet-"
     "nsg"           = "nsg-"
+    "snet"          = "snet-"
+    "nic"           = "nic-"
     "vm"            = "vm-"
     "vml"           = "vm-"
     "vmw"           = "vm-"
     "lb"            = "lb"
+    "evh"           = "evh-"
     "la"            = "la"
     "pip"           = "pip-"
     "gen"           = "gen"
-}
+  }
 }
 
 # variable "naming_constraints" {
