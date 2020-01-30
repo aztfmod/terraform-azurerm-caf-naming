@@ -110,3 +110,15 @@ resource "azurerm_storage_account" "log" {
   tags                      = local.tags
 }
 ```
+
+## Known issues
+Some resources are recreated when you change the naming convention attribute. For example the Azure monitor workspace cannot be recreated in a short time frame with the same name. To overcome that problem you need to taint the naming convention module first
+
+```hcl
+# taint the fullrandom object of the object to force a new name to be created
+rover /tf/caf/launchpads/launchpad_opensource taint module.log_analytics.module.caf_name_la.random_string.fullrandom
+
+# redeploy the landing zone
+rover /tf/caf/launchpads/launchpad_opensource apply -var location=southeastasia
+
+```
