@@ -23,7 +23,7 @@ variable "azlimits" {
     "acr"           = 49
     "afw"           = 50
     #afw limit is 80 - not working need to investigate - safeguarding it at 50 during investigation
-    "rg"            = 90
+    "rg"            = 80    # rg limited to 80 when deploying a VM. so moving from 90 to 80
     "kv"            = 24 
     "st"            = 24
     "vnet"          = 64
