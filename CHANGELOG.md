@@ -1,3 +1,10 @@
+## 0.1.6 (February 25, 2020)
+
+BUG FIXES:
+
+* **Resource group:** CAF Classic not implementing prefix a per CAF recommendation ([#13](https://github.com/aztfmod/terraform-azurerm-caf-naming/pull/13))
+* **Resource group:** Trailing dash on CAF Classic and CAF random resource group is added at the end. ([#8](https://github.com/aztfmod/terraform-azurerm-caf-naming/issues/8))
+
 ## 0.1.2 (January 14, 2020)
 
 FEATURES:
