@@ -5,7 +5,7 @@ locals {
     prefix = "test"
     resource_groups = {
         test = { 
-            name     = "test-caf"
+            name     = basename(abspath(path.module))
             location = "southeastasia" 
         },
     }
