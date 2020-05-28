@@ -1,5 +1,7 @@
 # Naming convention
 
+/!\ Please note we are nolonger maintaining this module for naming convention for are now leveraging a provider available here: https://github.com/aztfmod/terraform-provider-azurecaf
+
 This module implements a set of methodologies for naming convention implementation including the default Microsoft Cloud Adoption Framework for Azure recommendations as per https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging.
 
 ## Methods for naming convention
